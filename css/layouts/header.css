@@ -1,0 +1,110 @@
+#header {
+  min-height: 80px;
+  width: 100%;
+  background: transparent;
+
+  .header-wrapper {
+    .container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      .navbar {
+        padding: 0 24px;
+
+        ul {
+          margin: 0;
+          padding: 0;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          list-style-type: none;
+        }
+
+        li {
+          position: relative;
+          padding: 6px 10px;
+        }
+
+        li a {
+          font-size: 1rem;
+          font-weight: 600;
+          padding: 5px;
+          color: var(--font-color-2);
+        }
+
+        .hamburger {
+          display: none;
+          cursor: pointer;
+          .bar {
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin: 5px auto;
+            transition: all 0.3s ease-in-out;
+            background-color: var(--background-color-1);
+          }
+        }
+      }
+    }
+  }
+}
+
+.fixed-top {
+  position: fixed;
+  width: 100vw;
+  z-index: 2;
+}
+
+.bg-color {
+  background-color: var(--background-color-3);
+  transition: all 1s;
+  height: 6rem;
+}
+
+@media (min-width: 480px) and (max-width: 1024px) {
+  .hamburger {
+    display: block !important;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .navbar-nav {
+    position: fixed;
+    left: -200%;
+    top: 75px;
+    width: 100%;
+    justify-content: center;
+    gap: 0;
+    flex-direction: column;
+    background-color: var(--background-color-3);
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .nav-item {
+    margin: 1rem 0;
+  }
+  .navbar-nav.active {
+    left: 0;
+  }
+
+  li a {
+    font-size: 0.8rem !important;
+    padding: 5px;
+    color: var(--font-color-2);
+  }
+
+  #header .btn {
+    font-size: 0.8rem !important;
+    padding: 0.3rem 0.6rem !important;
+  }
+}

@@ -1,0 +1,56 @@
+#hero {
+  display: block;
+  background-image: url(../../images/hero-man.jpg);
+  background-size: cover;
+  background-position: center;
+  padding-top: 10rem;
+
+  .hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    gap: 1rem;
+
+    .badged span {
+      color: var(--font-color-2);
+      font-weight: 600;
+      padding: 0.2rem 1rem;
+      background-color: var(--background-color-3);
+      border-radius: 0.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .content h1 {
+      font-size: 4rem;
+      font-weight: 700;
+      color: var(--font-color-2);
+      line-height: 1.2;
+    }
+
+    .content p {
+      color: var(--font-color-2);
+      background: rgba(0, 0, 0, 0.5);
+      padding: 0.75rem;
+    }
+    .button-group {
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      gap: 2rem;
+      margin-bottom: 4rem;
+    }
+  }
+}
+@media (min-width: 480px) and (max-width: 1024px) {
+  .button-group {
+    flex-direction: column;
+    gap: 0.5rem !important;
+  }
+  #hero .btn {
+    display: block;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    width: 100%;
+  }
+}
