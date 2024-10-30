@@ -1,4 +1,4 @@
-# SPORT CENTER WEBSİTE
+# SPORT CENTER WEBSITE
 
 ## Description
 
